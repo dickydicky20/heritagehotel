@@ -49,18 +49,22 @@ Route::resource('dashboard/room-facilities', AdminRoomFacilityController::class)
 Route::resource('dashboard/hotel-facilities', AdminHotelFacilityController::class)->except('show')->middleware('admin');
 
 // Receptionist Dashboard
-Route::resource('/dashboard/reservations', ReceptionistReservationController::class)->except('create', 'store', 'edit', 'update')->middleware('receptionist');    
+Route::resource('/dashboard/reservations', ReceptionistReservationController::class)->except('create', 'store', 'edit', 'update')->middleware('receptionist');
 Route::put('dashboard/reservation/{reservation:id}/updateStatus', [ReceptionistReservationController::class, 'updateStatus'])->name('updateStatus')->middleware('receptionist');
 
 // Hotel Guest Dashboard
-Route::get('facilities', [FacilityController::class, 'index'])->name('facilities')->middleware('auth');
-Route::get('rooms', [RoomController::class, 'index'])->name('rooms')->middleware('auth');
+Route::get('facilities', [FacilityController::class, 'index'])->name('facilities');
+Route::get('rooms', [RoomController::class, 'index'])->name('rooms');
 // Booking
-Route::get('booking', [BookingController::class, 'index'])->name('booking')->middleware('auth');
-Route::post('booking', [BookingController::class, 'store'])->name('reservation')->middleware('auth');
+Route::get('booking', [BookingController::class, 'index'])->name('booking');
+Route::post('booking', [BookingController::class, 'store'])->name('reservation');
+
 
 // Detail Booking
 Route::get('dashboard/detail/{reservation:id}', [DashboardController::class, 'show'])->name('detail-reservation')->middleware('auth');
 
 // Print PDF
 Route::get('/dashboard/print/{reservation:id}', [PrintController::class, 'print'])->name('print')->middleware('auth');
+
+
+

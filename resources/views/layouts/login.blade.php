@@ -23,7 +23,7 @@
         }
 
         .active {
-            border-bottom: 3px solid rgb(0, 0, 0);
+            border-bottom: 3px solid rgb(255, 255, 255);
         }
     </style>
 
@@ -34,7 +34,7 @@
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light mt-4">
                     <div class="container-fluid">
-                        <img src="../assets/app-img/home03.png" class="img-fluid" width="100" alt="logo">
+                        <img src="../assets/app-img/logo1.webp" class="img-fluid" width="100" alt="logo">
                         <h1 class="display-5 fw-bold"> Heritage Hotel</h1>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

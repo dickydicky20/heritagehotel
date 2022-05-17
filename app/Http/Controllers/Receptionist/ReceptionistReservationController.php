@@ -65,6 +65,7 @@ class ReceptionistReservationController extends Controller
      */
     public function show(Booking $reservation)
     {
+
         $title = 'Detail | Data Reservasi';
 
         return view('receptionist.reservations.show', compact('title', 'reservation'));

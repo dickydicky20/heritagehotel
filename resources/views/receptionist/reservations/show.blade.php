@@ -11,10 +11,12 @@
 @endif
 
 <div class="table-responsive col-lg-12">
-    <div class="card">
-        <div class="card-header">
+
+    <div class="card bg-light">
+        <div class="card-header bg-info">
             {{ 'ID Registrasi : ' . $reservation->id }}
         </div>
+
         <div class="card-body">
             <h5 class="card-title">{{ $reservation->order_name }}</h5>
             <p class="card-text">

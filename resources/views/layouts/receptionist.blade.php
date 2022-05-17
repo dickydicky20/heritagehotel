@@ -11,22 +11,28 @@
 
     <style>
         body {
-            background-image: url('../assets/app-img/bg5.jpg');
+            background-image: url('../assets/app-img/bg17.jpg');
         }
 
         .nav-link.active {
-            border-bottom: 3px solid #000;
+            border-bottom: 3px solid rgb(0, 0, 0);
         }
     </style>
 
     <title>{{ $title }}</title>
 </head>
     <body>
+        <style>
+            body {
+            background-color: turquoise
+        }
+        </style>
+        <div class="bg info">
         <div class="container">
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light mt-4">
-                    <div class="container-fluid">
-                        <h1 class="display-5 fw-bold"> Heritage Hotel</h1>
+                    <div class="container-fluid bg info">
+                        <h1 class="display-5 fw-bold" style="color: rgb(0, 0, 0)"> Heritage Hotel</h1>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -35,15 +41,15 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a href="/" class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" style="color: black">Dashboard</a>
+                                    <a href="/" class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" style="color: rgb(0, 0, 0)">Dashboard</a>
                                 </li>
                                 <li class="nav-item me-3">
-                                    <a href="/dashboard/reservations" class="nav-link {{ Request::is('dashboard/reservations*') ? 'active' : '' }}" style="color: rgb(0, 0, 0)">Data Reservasi</a>
+                                    <a href="/dashboard/reservations" class="nav-link {{ Request::is('dashboard/reservations*') ? 'active' : '' }}" style="color: rgb(0, 0, 0)">Data Reservasi </a>
                                 </li>
                                 <li class="nav-item text-nowrap ms-3">
                                     <form action="{{ route('logout') }}" method="POST">
                                         @csrf
-                                        <button class="nav-link px-3 bg-light border-0" type="submit" onclick="return('Anda yakin ingin keluar?')" style="color: black">Logout</button>
+                                        <button class="nav-link px-3 bg-primary border-0" type="submit" onclick="return('Anda yakin ingin keluar?')" style="color: rgb(255, 255, 255)">Logout</button>
                                     </form>
                                 </li>
                             </ul>

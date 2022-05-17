@@ -36,6 +36,15 @@
                 @enderror
             </div>
             <div class="mb-3">
+                <label for="jumlah_kamar" style="color: white">Jumlah Kamar</label>
+                <input type="text" class="form-control" id="jumlah_kamar" name="jumlah_kamar" required>
+                @error('jumlah_kamar')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+            <div class="mb-3">
                 <label for="room_id" style="color: white">Tipe Kamar</label>
                 <select class="form-select mb-3" id="room_id" name="room_id">
                     @foreach ($rooms as $room)

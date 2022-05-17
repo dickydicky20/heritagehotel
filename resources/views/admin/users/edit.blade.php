@@ -5,6 +5,11 @@
 <h1 class="h2">Edit User</h1>
 
 <div class="col-lg-8">
+    <style>
+        body {
+            background-color: skyblue
+        }
+    </style>
 
     <form action="{{ route('users.update', $user->id) }}" method="POST">
         @method('PUT')

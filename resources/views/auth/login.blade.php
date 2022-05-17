@@ -18,8 +18,8 @@
         @endif
 
         <h2 class="text-center mb-4">Login</h2>
-        <div class="col-lg-10 mx-auto col-lg-5">
-            <form action="/login" method="POST" class="p-4 p-md-5 border rounded-3 bg-light" autocomplete="off">
+        <div class="col-lg-8 mx-auto col-lg-5">
+            <form action="/login" method="POST" class="p-4 p-md-5 border rounded-3 bg-light" autocomplete="off"> <br> <br>
                 @csrf
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="username" name="username" placeholder="Username" autofocus required>
@@ -28,12 +28,12 @@
                 <div class="form-floating mb-3">
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                     <label for="password" style="color: black">Password</label>
-                </div>
+                </div> <br>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
                 <hr class="my-4">
-                <div class="text-center">
+                {{-- <div class="text-center">
                     <small class="text-muted text-center">Not registered? <a href="/register">Register Now!</a></small>
-                </div>
+                </div> --}}
             </form>
         </div>
     </div>

@@ -2,7 +2,7 @@
 
 @section('container')
 
-<h1 class="h2">Data Kamar</h1>
+<h1 class="h2" style="color: white">Data Kamar</h1>
 
 @if (session()->has('success'))
         <div class="alert alert-success col-lg-12" role="alert">
@@ -11,7 +11,7 @@
     @endif
 
 <div class="table-responsive col-lg-12">
-    <table class="table table-sm table-bordered table-hover border-dark text-center">
+    <table class="table table-sm table-bordered table-white border-white text-center" style="color: white">
         <thead>
             <tr>
                 <th>#</th>

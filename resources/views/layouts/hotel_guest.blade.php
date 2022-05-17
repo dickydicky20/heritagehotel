@@ -15,7 +15,7 @@
         }
 
         .active {
-            border-bottom: 3px solid #000;
+            border-bottom: 3px solid rgb(255, 255, 255);
         }
     </style>
 
@@ -23,9 +23,16 @@
 </head>
     <body>
         <div class="container">
+            <style>
+                 body {
+            background-color: turquoise
+        }
+
+            </style>
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light mt-4">
                     <div class="container-fluid">
+                        {{-- <img src="../assets/app-img/logo1.webp" class="img-fluid" width="100" alt="logo"> --}}
                         <h1 class="display-5 fw-bold" style="color: white"> Heritage Hotel</h1>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +42,7 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a href="/" class="nav-link {{ Request::is('dashboard/*') ? 'active' : '' }}"  style="color: rgb(255, 255, 255)">Dashboard</a>
+                                    {{-- <a href="/" class="nav-link {{ Request::is('dashboard/*') ? 'active' : '' }}"  style="color: rgb(255, 255, 255)">Dashboard</a> --}}
                                 </li>
                                 <li class="nav-item">
                                     <a href="/rooms" class="nav-link {{ Request::is('rooms') ? 'active' : '' }}"  style="color: rgb(255, 255, 255)">Kamar</a>
@@ -49,7 +56,7 @@
                                 <li class="nav-item text-nowrap ms-3">
                                     <form action="{{ route('logout') }}" method="POST">
                                         @csrf
-                                        <button class="nav-link px-3 bg-light border-0" type="submit" onclick="return('Anda yakin ingin keluar?')">Logout</button>
+                                        <button class="nav-link px-3 bg-light border-0" type="submit" onclick="return('Anda yakin ingin keluar?')">Back</button>
                                     </form>
                                 </li>
                             </ul>
@@ -74,7 +81,7 @@
             @if (!Request::is('dashboard*'))
             <footer class="footer mt-auto py-3">
                 <div class="container">
-                    <div class="text-center">
+                    <div class="text-center" style="color: white">
                         &copy; 2022  Heritage Hotel
                     </div>
                 </div>

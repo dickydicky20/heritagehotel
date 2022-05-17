@@ -11,11 +11,11 @@
 
     <style>
         body {
-            background: linear-gradient(to right, rgba(58, 101, 257, 0.5), rgba(26, 221, 255, 0.781));
+            background-color: mediumslateblue
         }
 
         .nav-link.active {
-            border-bottom: 3px solid #000;
+            border-bottom: 3px solid rgb(255, 255, 255);
         }
     </style>
 
@@ -25,8 +25,7 @@
         <div class="container">
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light mt-4">
-                    <div class="container-fluid">
-                        <img src="../assets/app-img/logo1.webp" class="img-fluid" width="100" alt="logo">
+                    <div class="container-fluid" style="color: white">
                         <h1 class="display-5 fw-bold"> Heritage Hotel</h1>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,24 +35,24 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a href="/" class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}">Dashboard</a>
+                                    {{-- <a href="/" class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}">Dashboard</a> --}}
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/dashboard/users" class="nav-link {{ Request::is('dashboard/users*') ? 'active' : '' }}">User</a>
+                                    <a href="/dashboard/users" class="nav-link {{ Request::is('dashboard/users*') ? 'active' : '' }}" style="color: white">User</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/dashboard/rooms" class="nav-link {{ Request::is('dashboard/rooms*') ? 'active' : '' }}">Kamar</a>
+                                    <a href="/dashboard/rooms" class="nav-link {{ Request::is('dashboard/rooms*') ? 'active' : '' }}"style="color: white">Kamar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/dashboard/room-facilities" class="nav-link {{ Request::is('dashboard/room-facilities*') ? 'active' : '' }}">Fasilitas Kamar</a>
+                                    <a href="/dashboard/room-facilities" class="nav-link {{ Request::is('dashboard/room-facilities*') ? 'active' : '' }}"style="color: white">Fasilitas Kamar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/dashboard/hotel-facilities" class="nav-link {{ Request::is('dashboard/hotel-facilities*') ? 'active' : '' }}">Fasilitas Hotel</a>
+                                    <a href="/dashboard/hotel-facilities" class="nav-link {{ Request::is('dashboard/hotel-facilities*') ? 'active' : '' }}"style="color: white">Fasilitas Hotel</a>
                                 </li>
                                 <li class="nav-item text-nowrap ms-3">
                                     <form action="{{ route('logout') }}" method="POST">
                                         @csrf
-                                        <button class="nav-link px-3 bg-light border-0" type="submit" onclick="return('Anda yakin ingin keluar?')">Logout</button>
+                                        <button class="nav-link px-3 bg-light border-0" type="submit" onclick="return('Anda yakin ingin keluar?')"style="color: black">Logout</button>
                                     </form>
                                 </li>
                             </ul>

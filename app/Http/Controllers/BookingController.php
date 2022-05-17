@@ -25,6 +25,7 @@ class BookingController extends Controller
             'order_name' => 'required',
             'email' => 'required|email:dns',
             'telephone' => 'required|numeric',
+            'jumlah_kamar' => 'required|numeric',
             'room_id' => 'required',
             'check_in' => 'required',
             'check_out' => 'required',

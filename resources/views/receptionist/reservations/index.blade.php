@@ -2,7 +2,7 @@
 
 @section('container')
 
-<h1 class="h2">{{ $title }}</h1>
+<h1 class="h2" style="color: black">{{ $title }}</h1>
 
 @if (session()->has('success'))
     <div class="alert alert-success col-lg-12" role="alert">
@@ -13,21 +13,21 @@
 <form action="{{ url()->current() }}" autocomplete="off">
     <div class="w-25 input-group mb-3 input-group-sm">
         <input type="search" class="form-control sm"  placeholder="Search Name" name="search" value="{{ request('search') }}">
-        <button class="btn btn-outline-secondary" type="submit" id="button-addon2" style="color:black">Search</button>
+        <button class="btn btn-outline-secondary bg-primary" type="submit" id="button-addon2" style="color:rgb(255, 255, 255)">Search</button>
     </div>
 </form>
 
 <form action="{{ url()->current() }}" autocomplete="off">
-    <h2 class="h4">Search By Date</h2>
+    <h2 class="h4" style="color: rgb(0, 0, 0)">Search By Date</h2>
     <div class="w-50 input-group mb-3 input-group-sm">
         <input type="date" class="form-control sm" name="date1" value="{{ request('date1') }}">
         <input type="date" class="form-control sm" name="date2" value="{{ request('date2') }}">
-        <button class="btn btn-outline-secondary" type="submit" id="button-addon2" style="color:black">Search</button>
+        <button class="btn btn-outline-secondary bg-primary " type="submit" id="button-addon2" style="color:rgb(255, 255, 255)">Search</button>
     </div>
 </form>
 
-<div class="table-responsive col-lg-12">
-    <table class="table table-sm table-bordered table-hover border-dark text-center">
+<div class="table-responsive col-lg-12" style="color: white">
+    <table class="table table-sm table-bordered table-white border-white text-center" style="color: white">
         <thead>
             <tr>
                 <th>#</th>
@@ -68,6 +68,8 @@
 
                                 <button type="submit" class="badge bg-danger border-0" onclick="return confirm('Menghapus Data Ini Akan Mempengaruhi Data Lain, Anda Yakin?')"><span>Delete</span></button>
                             </form>
+                            <a href="{{ route('print', $reservation->id) }}" class="badge bg-red" style="color: white">
+                                <span>Print</span> </a>
                     </td>
                 </tr>
             @endforeach

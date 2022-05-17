@@ -7,7 +7,7 @@
         <div class="col-lg-10 mx-auto col-lg-5">
             <form action="{{ route('store') }}" method="POST" class="p-4 p-md-5 border rounded-3 bg-light" autocomplete="off">
                 @csrf
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3" style="color: black">
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="name" value="{{ old('name') }}" autofocus required>
                     <label for="name">Name</label>
                     @error('name')
@@ -16,7 +16,7 @@
                     </div>
                     @enderror
                 </div>
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3" style="color: black">
                     <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" placeholder="Username" required>
                     <label for="username">Username</label>
                     @error('username')
@@ -25,7 +25,7 @@
                     </div>
                     @enderror
                 </div>
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3" style="color: black">
                     <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="Password" required>
                     <label for="password">Password</label>
                     @error('password')
