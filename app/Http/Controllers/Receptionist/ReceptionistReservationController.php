@@ -17,11 +17,11 @@ class ReceptionistReservationController extends Controller
     public function index(Request $request)
     {
         $title = 'Data Reservasi';
-        
+
         $reservations = Booking::when($request->search, function ($query) use ($request) {
             $query->where('order_name', 'like', "%{$request->search}%");
         })->orderBy('created_at', 'desc')->paginate(5);
-    
+
         $reservations->appends($request->only('search'));
 
         if (request()->date1 || request()->date2) {
@@ -32,8 +32,8 @@ class ReceptionistReservationController extends Controller
             $data = Booking::latest()->get();
         }
 
-        return view('receptionist.reservations.index', compact('title', 'reservations')) 
-                ->with('i', (request('page', 1) - 1) * 5);
+        return view('receptionist.reservations.index', compact('title', 'reservations'))
+            ->with('i', (request('page', 1) - 1) * 5);
     }
 
     /**
@@ -103,7 +103,7 @@ class ReceptionistReservationController extends Controller
     {
         Booking::destroy($reservation->id);
 
-        return redirect('/dashboard/hotel-facilities')->with('success', 'Hotel Facility has been removed');
+        return redirect('/dashboard/reservations')->with('success', 'Hotel Facility has been removed');
     }
 
     public function updateStatus(Request $request, Booking $reservation)
@@ -114,6 +114,6 @@ class ReceptionistReservationController extends Controller
 
         Booking::where('id', $reservation->id)->update($validatedData);
 
-        return redirect('/dashboard/reservations/'.$reservation->id)->with('success', 'Status has been updated');
+        return redirect('/dashboard/reservations/' . $reservation->id)->with('success', 'Status has been updated');
     }
 }
