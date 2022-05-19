@@ -9,6 +9,13 @@
         <div class="col-lg-6" style="color: rgb(0, 0, 0)">
             <h2 class="display-5 fw-bold lh-1 mb-3">Tentang Kami</h2>
             <p class="lead">Heritage Hotels adalah operator hotel dan rekreasi terkenal di dunia yang bisa dibilang menyediakan petualangan 'pantai-dan-semak' terlengkap dan terluas di seluruh Afrika Timur. Dengan tujuh properti mulai dari Voyager Beach Resort bertema kapal 'semenit' di Mombasa dan kamp safari saudaranya di Tsavo, hingga sirkuit unik menarik dari kamp dan resor safari mewah di bawah payung Intrepids yang terkenal di dunia, hingga retret bintang lima di Ara.</p>
+            <div class="w-90 input-group mb-3 input-group-sm mt-5">
+                <input type="date" class="form-control sm" style="margin-right:10px; height:50px;" name="date1" value="{{ request('date1') }}">
+                <input type="date" class="form-control sm" style="margin-right:10px; height:50px;" name="date2" value="{{ request('date2') }}">
+                <a href="booking">
+                    <button class="btn btn-outline-dark bg-primary" style="margin-right:10px; height:50px;" type="submit">Book Now!</button>
+                </a>
+            </div>
             {{-- <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                 <a href="facilities" class="btn btn-dark btn-lg px-4 me-md-2 fw-bold">Fasilitas</a>
                 <a href="rooms" class="btn btn-outline-dark btn-lg px-4 fw-bold">Kamar</a>

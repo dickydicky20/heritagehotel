@@ -44,7 +44,7 @@
                                 <li class="nav-item">
                                     <a href="/login" class="nav-link {{ Request::is('login') ? 'active' : '' }}">Login</a>
 
-                                </li>
+                                {{-- </li>
                                 <li class="nav-item">
                                     <a href="/booking" class="nav-link {{ Request::is('booking') ? 'active' : '' }}">Booking</a>
 
@@ -56,7 +56,7 @@
                                 <li class="nav-item">
                                     <a href="/facilities" class="nav-link {{ Request::is('facilities') ? 'active' : '' }}">Fasilitas</a>
 
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>

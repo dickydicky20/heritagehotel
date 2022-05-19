@@ -31,9 +31,9 @@
                 </div> <br>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
                 <hr class="my-4">
-                {{-- <div class="text-center">
+                <div class="text-center">
                     <small class="text-muted text-center">Not registered? <a href="/register">Register Now!</a></small>
-                </div> --}}
+                </div>
             </form>
         </div>
     </div>
